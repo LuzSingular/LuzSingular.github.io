@@ -1,0 +1,190 @@
+/* ARQUIVO: css/custom.css */
+
+/* ======== 1. PALETA DE CORES PERSONALIZADA ======== */
+:root {
+  --bs-primary: #D4AF37; /* Dourado */
+  --bs-primary-rgb: 212, 175, 55;
+  --bs-dark: #1A233A; /* Azul noite */
+  --bs-dark-rgb: 26, 35, 58;
+  --bs-body-color: #343a40;
+  --bs-link-color: #D4AF37;
+  --bs-link-hover-color: #EAC65E;
+}
+
+/* ======== 2. ESTILOS ORIGINAIS DO TEMA ======== */
+body {
+  padding-top: 3.375rem;
+  color: #6c757d;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #343a40;
+}
+h1, .h1 {
+  font-size: 6rem;
+  line-height: 1;
+}
+h2, .h2 {
+  font-size: 3.5rem;
+}
+p.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+.subheading {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+#sideNav {
+  background-color: var(--bs-dark); /* Usa a nova cor escura */
+}
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+#sideNav .navbar-toggler:focus {
+  outline-color: #d48a6e;
+}
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+  }
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+  #sideNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+}
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+.social-icons .social-icon:hover {
+  background-color: var(--bs-primary); /* Usa a nova cor primária */
+}
+section.resume-section {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 75rem;
+  min-height: 100vh;
+}
+section.resume-section .resume-section-content {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.bg-primary {
+    background-color: var(--bs-dark) !important; /* Força o menu a usar a cor escura */
+}
+.text-primary {
+    color: var(--bs-primary) !important; /* Força os textos a usar a cor primária */
+}
+a {
+    color: var(--bs-link-color);
+}
+a:hover, a:focus, a:active {
+    color: var(--bs-link-hover-color);
+}
+
+/* ======== 3. NOVOS EFEITOS E FUNCIONALIDADES ======== */
+
+/* Efeito de hover para as imagens do portfólio */
+#portfolio .img-thumbnail {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#portfolio .img-thumbnail:hover {
+  transform: scale(1.05); /* Aumenta um pouco o tamanho da imagem */
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais forte */
+  cursor: pointer;
+}
+
+/* Estilo do botão "Voltar ao Topo" */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bs-primary);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  text-decoration: none;
+}
+#backToTop.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+#backToTop:hover {
+  background-color: var(--bs-dark);
+  color: white;
+}
