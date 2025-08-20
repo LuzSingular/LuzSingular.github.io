@@ -1,6 +1,6 @@
 /* ARQUIVO: css/custom.css */
 
-/* ======== 1. PALETA DE CORES PERSONALIZADA ======== */
+/* ======== 1. PALETA DE CORES E VARIÁVEIS ======== */
 :root {
   --bs-primary: #D4AF37; /* Dourado */
   --bs-primary-rgb: 212, 175, 55;
@@ -9,30 +9,26 @@
   --bs-body-color: #343a40;
   --bs-link-color: #D4AF37;
   --bs-link-hover-color: #EAC65E;
+  --bs-background: #CFCFCF;
 }
 
-/* ======== 2. ESTILOS ORIGINAIS DO TEMA ======== */
+/* ======== 2. ESTILOS GERAIS E FONTES ======== */
 body {
-  padding-top: 3.375rem;
-  color: #6c757d;
+  color: var(--bs-body-color);
   font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: var(--bs-background); /* Fundo cinza aplicado ao body */
+  padding-top: 56px; /* Espaço para a navbar fixa */
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-    padding-left: 17rem;
-  }
-}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
+  color: var(--bs-body-color);
 }
 h1, .h1 {
-  font-size: 6rem;
-  line-height: 1;
+  font-size: 4.5rem;
+  line-height: 1.1;
 }
 h2, .h2 {
   font-size: 3.5rem;
@@ -47,98 +43,9 @@ p.lead {
   font-weight: 500;
   font-size: 1.5rem;
 }
-#sideNav {
-  background-color: var(--bs-dark); /* Usa a nova cor escura */
-}
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 800;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-#sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
-}
-@media (min-width: 992px) {
-  #sideNav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    height: 100vh;
-  }
-  #sideNav .navbar-brand {
-    display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
-  }
-  #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  }
-  #sideNav .navbar-collapse {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
-    width: 100%;
-    margin-bottom: auto;
-  }
-  #sideNav .navbar-collapse .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
-}
-.social-icons .social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
-  color: #fff;
-  border-radius: 100%;
-  font-size: 1.5rem;
-  margin-right: 1.5rem;
-}
-.social-icons .social-icon:last-child {
-  margin-right: 0;
-}
-.social-icons .social-icon:hover {
-  background-color: var(--bs-primary); /* Usa a nova cor primária */
-}
-section.resume-section {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
-  min-height: 100vh;
-}
-section.resume-section .resume-section-content {
-  width: 100%;
-}
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-.bg-primary {
-    background-color: var(--bs-dark) !important; /* Força o menu a usar a cor escura */
-}
+
 .text-primary {
-    color: var(--bs-primary) !important; /* Força os textos a usar a cor primária */
+    color: var(--bs-primary) !important;
 }
 a {
     color: var(--bs-link-color);
@@ -147,49 +54,111 @@ a:hover, a:focus, a:active {
     color: var(--bs-link-hover-color);
 }
 
-/* ======== 3. NOVOS EFEITOS E FUNCIONALIDADES ======== */
+/* ======== 3. NAVEGAÇÃO SUPERIOR ======== */
+#mainNav {
+  background-color: var(--bs-dark);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+#mainNav .navbar-brand {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: "Muli", sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;
+  transition: color 0.2s;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: var(--bs-primary);
+}
 
-/* Efeito de hover para as imagens do portfólio */
-#portfolio .img-thumbnail {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-#portfolio .img-thumbnail:hover {
-  transform: scale(1.05); /* Aumenta um pouco o tamanho da imagem */
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais forte */
-  cursor: pointer;
+/* ======== 4. SEÇÕES E LAYOUT DINÂMICO ======== */
+.page-section {
+  padding: 6rem 0;
+  display: none; /* Todas as seções são ocultas por padrão */
+  animation: fadeIn 0.6s ease-in-out;
+  min-height: calc(100vh - 56px - 101px); /* Altura mínima (tela - navbar - rodapé) */
 }
 
-/* Estilo do botão "Voltar ao Topo" */
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bs-primary);
-  color: white;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  border-radius: 50%;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  text-decoration: none;
+.page-section.active {
+  display: flex; /* Seção ativa é exibida como flex para centralizar conteúdo */
+  align-items: center;
 }
-#backToTop.show {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-#backToTop:hover {
+
+/* A seção "Sobre" tem um tratamento especial */
+header.page-section#about {
   background-color: var(--bs-dark);
   color: white;
 }
+header.page-section#about h1,
+header.page-section#about .subheading,
+header.page-section#about .subheading a {
+  color: white;
+}
+.profile-image {
+  max-width: 20rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+}
 
-/* Estilo para as opções dentro do Pop-up (Modal) */
+.card {
+  background-color: #fff;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== 5. COMPONENTES CUSTOMIZADOS ======== */
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  transition: background-color 0.2s;
+}
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+.social-icons .social-icon:hover {
+  background-color: var(--bs-primary);
+}
+
+.portfolio-trigger {
+  padding: 0;
+  border: none;
+  background: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.portfolio-trigger .img-thumbnail {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.portfolio-trigger:hover .img-thumbnail {
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
 .modal-option-card {
   border: 1px solid #dee2e6;
   padding: 1.5rem;
@@ -208,7 +177,7 @@ a:hover, a:focus, a:active {
     --bs-btn-hover-bg: #D4AF37;
     --bs-btn-hover-border-color: #D4AF37;
 }
-/* Estilo para o Painel Lateral do Modal do Portfólio */
+
 .portfolio-panel {
   padding: 1rem;
   background-color: #f8f9fa;
@@ -220,4 +189,24 @@ a:hover, a:focus, a:active {
   background-color: var(--bs-primary);
   color: white;
   font-weight: bold;
+}
+
+/* ======== 6. RODAPÉ ======== */
+.site-footer {
+  background-color: var(--bs-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2.5rem 0;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+}
+
+.site-footer .social-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 0.5rem;
+}
+
+.site-footer .social-icon:hover {
+  background-color: var(--bs-primary);
 }
