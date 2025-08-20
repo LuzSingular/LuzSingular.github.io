@@ -188,3 +188,36 @@ a:hover, a:focus, a:active {
   background-color: var(--bs-dark);
   color: white;
 }
+
+/* Estilo para as opções dentro do Pop-up (Modal) */
+.modal-option-card {
+  border: 1px solid #dee2e6;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.modal-option-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #D4AF37;
+    --bs-btn-border-color: #D4AF37;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #D4AF37;
+    --bs-btn-hover-border-color: #D4AF37;
+}
+/* Estilo para o Painel Lateral do Modal do Portfólio */
+.portfolio-panel {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.portfolio-panel .plan-button.active {
+  background-color: var(--bs-primary);
+  color: white;
+  font-weight: bold;
+}
