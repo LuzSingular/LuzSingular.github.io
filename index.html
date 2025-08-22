@@ -8,27 +8,35 @@
     <meta name="description" content="Fotografia profissional e serviços de impressão com qualidade e dedicação em Sete Barras, SP. Capture momentos únicos com a Luz Singular." />
     <meta name="author" content="Luz Singular" />
 
+    <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://luzsingular.github.io/" />
     <meta property="og:title" content="Luz Singular | Fotografia e Impressão" />
     <meta property="og:description" content="Serviços de fotografia e impressão em Sete Barras, SP. Eternize seus melhores momentos." />
     <meta property="og:image" content="https://luzsingular.github.io/assets/img/capa-social.jpg" />
 
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     
+    <!-- Font Awesome Icons -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
     
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-
+    <!-- External CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet" />
   </head>
   <body id="page-top">
-    <!-- NAVEGAÇÃO SUPERIOR MODERNA -->
+    
+    <!-- =================================================================
+    HEADER & NAVIGATION
+    ================================================================== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="#about">Luz Singular</a>
@@ -39,19 +47,21 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
             <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
             <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-            <li class="nav-item"><a class="nav-link" href="#processo">Como Funciona</a></li>
+            <li class="nav-item"><a class="nav-link" href="#processo">Como Funciona?</a></li>
             <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Conteúdo principal da página -->
+    <!-- =================================================================
+    MAIN CONTENT WRAPPER
+    ================================================================== -->
     <div class="content-wrapper">
-        <!-- SEÇÃO "SOBRE" -->
-        <header class="page-section" id="about">
+        
+        <!-- ========================== ABOUT SECTION =========================== -->
+        <section class="page-section" id="about">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 text-center text-lg-start">
@@ -69,138 +79,262 @@
                             Acredito que cada pessoa e cada momento possuem uma luz única. Meu trabalho na Luz Singular é capturar essa essência, transformando instantes em memórias eternas.
                         </p>
                         <div class="social-icons">
-                            <a class="social-icon" href="https://www.instagram.com/ls.luzsingular/" target="_blank" aria-label="Visitar Instagram"><i class="fab fa-instagram"></i></a>
-                            <a class="social-icon" href="https://api.whatsapp.com/send?phone=5513998059374" target="_blank" aria-label="Contatar via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a class="social-icon" href="https://www.instagram.com/ls.luzsingular/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="social-icon" href="https://api.whatsapp.com/send?phone=5513998059374" target="_blank" rel="noopener noreferrer" aria-label="Contatar via WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+            <a href="#portfolio" class="scroll-down-indicator" aria-label="Rolar para o portfólio">
+                <span>Meu Portfólio</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
 
-        <!-- CONTAINER PARA CONTEÚDO DINÂMICO -->
-        <main id="content-container">
-            <section class="page-section" id="portfolio">
-                <div class="container">
-                    <h2 class="mb-5 text-center" data-aos="fade-up">Meu Portfólio Interativo</h2>
-                    <p class="lead mb-5 text-center" data-aos="fade-up" data-aos-delay="100">Clique em uma imagem para ver os detalhes e comparar os resultados de cada plano de edição.</p>
-                    <div class="row">
-                        <div class="col-md-4 mb-4" data-aos="zoom-in">
-                            <button type="button" class="portfolio-trigger" data-bs-toggle="modal" data-bs-target="#portfolioModal" 
-                               data-img-basico="assets/img/portfolio/1-basico.jpg" 
-                               data-img-intermediario="assets/img/portfolio/1-intermediario.jpg" 
-                               data-img-premium="assets/img/portfolio/1-premium.jpg"
-                               aria-label="Ver detalhes do exemplo de Retrato">
-                                <img class="img-fluid img-thumbnail" src="assets/img/portfolio/1-intermediario.jpg" alt="Exemplo de Retrato">
-                            </button>
+        <!-- ========================== PORTFOLIO SECTION =========================== -->
+        <section class="page-section" id="portfolio">
+            <div class="container">
+                <h2 class="mb-5 text-center" data-aos="fade-up">Portfólio</h2>
+                <div class="row g-4">
+                    <!-- Imagens do Portfólio -->
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio/1.jpg" class="img-fluid" alt="Foto 1 do portfólio">
                         </div>
-                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                            <button type="button" class="portfolio-trigger" data-bs-toggle="modal" data-bs-target="#portfolioModal"
-                               data-img-basico="assets/img/portfolio/2-basico.jpg" 
-                               data-img-intermediario="assets/img/portfolio/2-intermediario.jpg" 
-                               data-img-premium="assets/img/portfolio/2-premium.jpg"
-                               aria-label="Ver detalhes do exemplo de Produto">
-                                <img class="img-fluid img-thumbnail" src="assets/img/portfolio/2-intermediario.jpg" alt="Exemplo de Produto">
-                            </button>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio/2.jpg" class="img-fluid" alt="Foto 2 do portfólio">
                         </div>
-                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                            <button type="button" class="portfolio-trigger" data-bs-toggle="modal" data-bs-target="#portfolioModal"
-                               data-img-basico="assets/img/portfolio/3-basico.jpg" 
-                               data-img-intermediario="assets/img/portfolio/3-intermediario.jpg" 
-                               data-img-premium="assets/img/portfolio/3-premium.jpg"
-                               aria-label="Ver detalhes do exemplo de Ensaio Externo">
-                                <img class="img-fluid img-thumbnail" src="assets/img/portfolio/3-intermediario.jpg" alt="Exemplo de Ensaio Externo">
-                            </button>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio/3.jpg" class="img-fluid" alt="Foto 3 do portfólio">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio/4.jpg" class="img-fluid" alt="Foto 4 do portfólio">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio/5.jpg" class="img-fluid" alt="Foto 5 do portfólio">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio/6.jpg" class="img-fluid" alt="Foto 6 do portfólio">
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <!-- ========================== DYNAMIC CONTENT CONTAINER =========================== -->
+        <main id="content-container">
+            <!-- ========================== SERVICES SECTION =========================== -->
             <section class="page-section" id="servicos">
                 <div class="container">
-                    <h2 class="mb-5 text-center" data-aos="fade-up">Serviços Disponíveis</h2>
-                    <div class="row">
-                        <div class="col-lg-7 mb-5 mb-lg-0" data-aos="fade-right">
-                            <div class="card shadow-lg border-0 rounded-4 h-100">
-                                <div class="card-body p-4 text-center d-flex flex-column justify-content-center">
-                                    <h3 class="card-title mb-4">📸 Fotografia Profissional</h3>
-                                    <p class="lead">Ensaios para todas as ocasiões, com a flexibilidade que você precisa.</p>
-                                    <p class="text-muted">Escolha entre planos por foto ou pacotes completos com o melhor custo-benefício.</p>
-                                    <!-- CORRIGIDO: Botão volta a abrir o modal -->
-                                    <button type="button" class="btn btn-primary btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#modalOpcoesFotografia">
-                                        Ver Opções de Fotografia
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5" data-aos="fade-left">
-                            <div class="card shadow-lg border-0 rounded-4 h-100">
-                                <div class="card-body p-4 d-flex flex-column">
-                                    <h3 class="card-title text-center mb-4">🖨️ Impressão</h3>
-                                    <p class="text-muted mb-2">Imprimo seu material no formato desejado (pôster, banner, convite, etc.). Qualidade profissional para suas imagens.</p>
-                                    <h5 class="fw-bold text-success mb-3">R$ 8,00 a cada folha A4</h5>
-                                    <p class="text-muted small">⚠️ Não inclui recorte, moldura ou montagem.</p>
-                                    <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20impressão." target="_blank" class="btn btn-primary mt-auto">Consultar Preços</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="page-section" id="processo">
-                <div class="container">
-                    <h2 class="mb-5 text-center" data-aos="fade-up">Entenda o Processo</h2>
-                    <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">Cada projeto é único, mas meu processo é sempre transparente e focado na qualidade. Escolha um serviço abaixo para ver como vamos trabalhar juntos.</p>
-                    <ul class="nav nav-pills justify-content-center mb-4" id="processoTab" role="tablist" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="mb-5 text-center" data-aos="fade-up">Meus Serviços</h2>
+                    <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">Flexibilidade para atender exatamente o que você precisa. Explore as opções abaixo.</p>
+                    
+                    <ul class="nav nav-pills justify-content-center mb-5" id="servicosTab" role="tablist" data-aos="fade-up" data-aos-delay="200">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="fotografia-tab" data-bs-toggle="tab" data-bs-target="#fotografia-tab-pane" type="button" role="tab" aria-controls="fotografia-tab-pane" aria-selected="true">📷 Fotografia</button>
+                            <button class="nav-link active" id="pacotes-tab" data-bs-toggle="tab" data-bs-target="#pacotes-tab-pane" type="button" role="tab" aria-controls="pacotes-tab-pane" aria-selected="true">📷 Pacotes de Ensaio</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="planos-tab" data-bs-toggle="tab" data-bs-target="#planos-tab-pane" type="button" role="tab" aria-controls="planos-tab-pane" aria-selected="false">📸 Planos por Foto</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="impressao-tab" data-bs-toggle="tab" data-bs-target="#impressao-tab-pane" type="button" role="tab" aria-controls="impressao-tab-pane" aria-selected="false">🖨️ Impressão</button>
                         </li>
                     </ul>
+
+                    <div class="tab-content" id="servicosTabContent">
+                        <!-- Tab: Pacotes de Ensaio -->
+                        <div class="tab-pane fade show active" id="pacotes-tab-pane" role="tabpanel" aria-labelledby="pacotes-tab">
+                            <div class="row">
+                                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                                    <div class="card service-card h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <h4 class="card-title">Pacote Essencial</h4>
+											   <h6 class="card-subtitle mb-3 text-muted">R$ 60,00</h6>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check text-primary"></i> 15 fotos com tratamento padrão</li>
+                                                <li><i class="fas fa-check text-primary"></i> Até 1 hora de ensaio</li>
+                                                <li><i class="fas fa-check text-primary"></i> Entrega digital em alta resolução</li>
+                                            </ul>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Essencial." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card service-card h-100 popular">
+                                        <span class="badge bg-primary">Mais Popular</span>
+                                        <div class="card-body d-flex flex-column">
+                                            <h4 class="card-title">Pacote Padrão</h4>
+											   <h6 class="card-subtitle mb-3 text-muted">R$ 96,00</h6>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check text-primary"></i> 30 fotos com tratamento padrão</li>
+                                                <li><i class="fas fa-check text-primary"></i> Até 2 horas de ensaio</li>
+                                                <li><i class="fas fa-check text-primary"></i> Entrega digital em alta resolução</li>
+                                            </ul>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Padrão." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card service-card h-100">
+                                        <div class="card-body d-flex flex-column">
+                                            <h4 class="card-title">Pacote Premium</h4>
+											   <h6 class="card-subtitle mb-3 text-muted">R$ 160,00</h6>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check text-primary"></i> 50 fotos com tratamento padrão</li>
+                                                <li><i class="fas fa-check text-primary"></i> Até 3 horas de ensaio</li>
+                                                <li><i class="fas fa-check text-primary"></i> Entrega digital em alta resolução</li>
+                                            </ul>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Premium." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Planos por Foto -->
+                        <div class="tab-pane fade" id="planos-tab-pane" role="tabpanel" aria-labelledby="planos-tab">
+                             <div class="row" data-aos="fade-up">
+                                <!-- Coluna da Esquerda: Visualizador -->
+                                <div class="col-lg-4 mb-5 mb-lg-0">
+                                    <div class="portfolio-item-interactive shadow rounded">
+                                        <div class="portfolio-image-container" 
+                                             data-img-basico="assets/img/planos/1-basico.jpg" 
+                                             data-img-intermediario="assets/img/planos/1-intermediario.jpg" 
+                                             data-img-premium="assets/img/planos/1-premium.jpg">
+                                            <img class="img-fluid portfolio-image" src="assets/img/planos/1-intermediario.jpg" alt="Exemplo de tratamento de foto">
+                                        </div>
+                                        <div class="portfolio-controls p-3">
+                                            <h6 class="text-center mb-2">Veja a diferença de cada tratamento:</h6>
+                                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                                <button type="button" class="btn btn-sm btn-outline-primary plan-button" data-plan="basico">Básico</button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary plan-button active" data-plan="intermediario">Padrão</button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary plan-button" data-plan="premium">Premium</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Coluna da Direita: Cards de Planos -->
+                                <div class="col-lg-7">
+                                    <div class="card service-card h-60 mb-4">
+                                        <div class="card-body d-flex flex-column">
+                                            <h4 class="card-title">Plano Básico</h4>
+                                            <h6 class="card-subtitle mb-3 text-muted">R$ 7,90 / foto</h6>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check text-primary"></i> Direto da câmera; Sem nenhum  tratamento!.</li>
+                                            </ul>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Básico%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                    <div class="card service-card h-60 mb-4">
+                                        <div class="card-body d-flex flex-column">
+                                            <h4 class="card-title">Plano Padrão</h4>
+                                            <h6 class="card-subtitle mb-3 text-muted">R$ 10,99 / foto</h6>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check text-primary"></i> Tratamento cor e luz.</li>
+                                            </ul>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Padrão%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                    <div class="card service-card h-60">
+                                        <div class="card-body d-flex flex-column">
+                                            <h4 class="card-title">Plano Premium</h4>
+                                            <h6 class="card-subtitle mb-3 text-muted">R$ 20,00 / foto</h6>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check text-primary"></i> Tratamento completo, com retoques finos.</li>
+                                            </ul>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Premium%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Impressão -->
+                        <div class="tab-pane fade" id="impressao-tab-pane" role="tabpanel" aria-labelledby="impressao-tab">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6" data-aos="fade-up">
+                                    <div class="card service-card">
+                                        <div class="card-body text-center p-4">
+                                            <h3 class="card-title">Impressão de Qualidade</h3>
+                                            <p class="lead">A partir de R$ 8,00</p>
+                                            <p>Imprimo seu material no formato A4 com qualidade profissional. Ideal para pôsteres, banners, convites e mais. Não inclui recorte, moldura ou montagem.</p>
+                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20impressão." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg mt-3">Solicitar Orçamento</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            </section>
+
+            <!-- ========================== PROCESS SECTION =========================== -->
+            <section class="page-section" id="processo">
+                <div class="container">
+                    <h2 class="mb-5 text-center" data-aos="fade-up">Como Funciona?</h2>
+                    <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">Cada projeto é único, mas meu processo é sempre transparente e focado na qualidade.</p>
+                    <ul class="nav nav-pills justify-content-center mb-4" id="processoTab" role="tablist" data-aos="fade-up" data-aos-delay="200">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="fotografia-tab" data-bs-toggle="tab" data-bs-target="#fotografia-tab-pane" type="button" role="tab" aria-controls="fotografia-tab-pane" aria-selected="true">📷 Fotografia</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="impressao-tab-processo" data-bs-toggle="tab" data-bs-target="#impressao-tab-pane-processo" type="button" role="tab" aria-controls="impressao-tab-pane-processo" aria-selected="false">🖨️ Impressão</button>
+                        </li>
+                    </ul>
                     <div class="tab-content" id="processoTabContent">
                         <div class="tab-pane fade show active" id="fotografia-tab-pane" role="tabpanel" aria-labelledby="fotografia-tab">
                             <div class="row text-center">
-                                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="col-lg col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                                     <h4>1. Planejamento</h4>
-                                    <p class="text-muted">Tudo começa com uma boa conversa para entender sua visão, discutir o estilo, o local e agendar a data perfeita para o ensaio.</p>
+                                    <p class="text-muted">Conversamos para entender sua visão, discutir o estilo, o local e agendar a data perfeita.</p>
                                 </div>
-                                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-                                    <h4>2. O Dia do Ensaio</h4>
-                                    <p class="text-muted">Com tudo planejado, criamos um ambiente leve e profissional para que o resultado capture sua essência com naturalidade.</p>
+                                <div class="col-lg col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                                    <h4>2. O Ensaio</h4>
+                                    <p class="text-muted">Criamos um ambiente leve e profissional para que o resultado capture sua essência com naturalidade.</p>
                                 </div>
-                                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
-                                    <h4>3. A escolha das suas fotos</h4>
-                                    <p class="text-muted">Você receberá acesso a uma galeria online exclusiva com as prévias do nosso ensaio. Com calma, você poderá navegar por todos os momentos que capturamos e selecionar suas fotos favoritas, aquelas que farão parte da sua história.</p>
+                                <div class="col-lg col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                                    <h4>3. A Escolha</h4>
+                                    <p class="text-muted">Você recebe uma galeria online para selecionar com calma suas fotos favoritas.</p>
                                 </div>
-                                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
-                                    <h4>4. A mágica da edição</h4>
-                                    <p class="text-muted">Com as suas fotos preferidas já escolhidas por você, eu inicio meu tratamento de edição. Cada imagem selecionada é ajustada com cuidado, realçando cores e luz para um acabamento profissional e emocionante.</p>
+                                <div class="col-lg col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                                    <h4>4. A Edição</h4>
+                                    <p class="text-muted">Cada imagem escolhida é tratada com cuidado, realçando cores e luz para um acabamento profissional.</p>
                                 </div>
-	                            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
-                                    <h4>5. Entrega final</h4>
-                                    <p class="text-muted">Suas fotos, agora editadas e em alta resolução, são entregues em uma nova galeria online, prontas para você baixar, guardar com carinho e compartilhar com o mundo.</p>
+	                            <div class="col-lg col-md-6 mb-4" data-aos="fade-up" data-aos-delay="700">
+                                    <h4>5. Entrega</h4>
+                                    <p class="text-muted">Suas fotos em alta resolução são entregues em uma nova galeria, prontas para você baixar e compartilhar.</p>
                                 </div>							
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="impressao-tab-pane" role="tabpanel" aria-labelledby="impressao-tab">
+                        <div class="tab-pane fade" id="impressao-tab-pane-processo" role="tabpanel" aria-labelledby="impressao-tab-processo">
                             <div class="row text-center">
                                 <div class="col-md-3 mb-4">
                                     <h4>1. Consulta</h4>
-                                    <p class="text-muted">Você me envia sua ideia e conversamos sobre os detalhes técnicos: papel, tamanho e acabamento para seu orçamento.</p>
+                                    <p class="text-muted">Você me envia sua ideia e conversamos sobre os detalhes técnicos: papel, tamanho e acabamento.</p>
                                 </div>
                                 <div class="col-md-3 mb-4">
-                                    <h4>2. Revisão do Arquivo</h4>
-                                    <p class="text-muted">Faço uma revisão técnica do seu arquivo para garantir que a qualidade da impressão será a melhor possível.</p>
+                                    <h4>2. Revisão</h4>
+                                    <p class="text-muted">Faço uma revisão técnica do seu arquivo para garantir a melhor qualidade de impressão possível.</p>
                                 </div>
                                 <div class="col-md-3 mb-4">
                                     <h4>3. Produção</h4>
-                                    <p class="text-muted">Com o arquivo aprovado, inicio a produção com materiais de qualidade e rigoroso controle em cada etapa.</p>
+                                    <p class="text-muted">Com o arquivo aprovado, inicio a produção com materiais de alta qualidade.</p>
                                 </div>
                                 <div class="col-md-3 mb-4">
                                     <h4>4. Entrega</h4>
-                                    <p class="text-muted">Seu material final é embalado com cuidado e combinamos a melhor forma para que ele chegue até você.</p>
+                                    <p class="text-muted">Seu material final é embalado com cuidado e combinamos a melhor forma de entrega.</p>
                                 </div>
                             </div>
                         </div>
@@ -208,17 +342,40 @@
                 </div>
             </section>
             
+            <!-- ========================== CONTACT SECTION =========================== -->
             <section class="page-section" id="contato">
-              <div class="container text-center">
-                <h2 class="mb-4" data-aos="fade-up">Vamos conversar?</h2>
-                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
-                  Estou à disposição para tirar suas dúvidas e criar um orçamento personalizado.
+              <div class="container">
+                <h2 class="mb-4 text-center" data-aos="fade-up">Vamos conversar?</h2>
+                <p class="lead mb-5 text-center" data-aos="fade-up" data-aos-delay="100">
+                  Use o formulário abaixo ou, se preferir, me chame nas redes sociais.
                 </p>
-                <div class="mt-5" data-aos="fade-up" data-aos-delay="200">
-                  <a href="https://api.whatsapp.com/send?phone=5513998059374" target="_blank" class="btn btn-success btn-lg mx-2 mb-3">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <form id="contactForm" action="https://formspree.io/f/xjkonkzw" method="POST" class="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Seu Nome</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Seu Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" id="submitButton" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                            </div>
+                        </form>
+                        <div id="form-status" class="mt-4 text-center"></div>
+                    </div>
+                </div>
+                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                  <a href="https://api.whatsapp.com/send?phone=5513998059374" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg mx-2 mb-3">
                     <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
                   </a>
-                  <a href="https://www.instagram.com/ls.luzsingular/" target="_blank" class="btn btn-dark btn-lg mx-2 mb-3">
+                  <a href="https://www.instagram.com/ls.luzsingular/" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg mx-2 mb-3">
                     <i class="fab fa-instagram"></i> Seguir no Instagram
                   </a>
                 </div>
@@ -227,7 +384,9 @@
         </main>
     </div>
 
-    <!-- Rodapé do Site -->
+    <!-- =================================================================
+    FOOTER
+    ================================================================== -->
     <footer class="site-footer">
         <div class="container">
             <div class="row align-items-center">
@@ -235,82 +394,22 @@
                     <p class="mb-0">Copyright &copy; Luz Singular <span id="currentYear"></span>. Todos os direitos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a class="social-icon" href="https://www.instagram.com/ls.luzsingular/" target="_blank" aria-label="Visitar Instagram"><i class="fab fa-instagram"></i></a>
-                    <a class="social-icon" href="https://api.whatsapp.com/send?phone=5513998059374" target="_blank" aria-label="Contatar via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/ls.luzsingular/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="social-icon" href="https://api.whatsapp.com/send?phone=5513998059374" target="_blank" rel="noopener noreferrer" aria-label="Contatar via WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modals -->
-    <div class="modal fade" id="modalOpcoesFotografia" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content rounded-4">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Opções de Fotografia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <div class="row">
-                        <div class="col-md-6 mb-4 mb-md-0">
-                            <div class="modal-option-card">
-                                <h4 class="text-center">Planos por Foto</h4>
-                                <p class="text-muted text-center small">Ideal para quem precisa de poucas fotos com tratamento específico.</p>
-                                <hr>
-                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Plano%20Básico%20(por%20foto)." target="_blank" class="btn btn-outline-primary w-100 mb-2">Plano Básico - R$ 8,90</a>
-                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Plano%20Padrão%20(por%20foto)." target="_blank" class="btn btn-outline-primary w-100 mb-2">Plano Padrão - R$ 16,00</a>
-                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Plano%20Máximo%20(por%20foto)." target="_blank" class="btn btn-outline-primary w-100">Plano Máximo - R$ 20,00</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="modal-option-card">
-                                <h4 class="text-center">Pacotes de Ensaio</h4>
-                                <p class="text-muted text-center small">A melhor opção para ensaios completos com um preço fechado.</p>
-                                <hr>
-                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Essencial." target="_blank" class="btn btn-primary w-100 mb-2">Pacote Essencial (15 fotos)</a>
-                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Padrão." target="_blank" class="btn btn-primary w-100 mb-2">Pacote Padrão (30 fotos)</a>
-                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Premium." target="_blank" class="btn btn-primary w-100">Pacote Premium (50 fotos)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="portfolioModalLabel">Demonstração de Planos</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-8">
-                <img id="portfolioModalImage" src="" class="img-fluid" alt="Imagem de demonstração do plano de edição selecionado.">
-              </div>
-              <div class="col-md-4">
-                <div class="portfolio-panel">
-                  <h4 class="mb-3">Ver resultado por plano:</h4>
-                  <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-outline-primary plan-button" data-plan="basico">Plano Básico</button>
-                    <button type="button" class="btn btn-outline-primary plan-button active" data-plan="intermediario">Plano Padrão</button>
-                    <button type="button" class="btn btn-outline-primary plan-button" data-plan="premium">Plano Premium</button>
-                  </div>
-                  <hr>
-                  <p class="text-muted small">Clique nos botões acima para ver a diferença que cada tipo de edição faz na imagem. Gostou de algum? É só pedir um orçamento!</p>
-                  <button type="button" id="goToServicesBtn" class="btn btn-success w-100" data-bs-dismiss="modal">Conhecer Planos e Pacotes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Botão Voltar ao Topo -->
+    <a href="#page-top" id="scrollToTopBtn" class="scroll-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
+    <!-- =================================================================
+    SCRIPTS
+    ================================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="js/scripts.js" defer></script>
   </body>

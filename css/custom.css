@@ -1,6 +1,19 @@
-/* ARQUIVO: css/custom.css */
+/*
+ * LUZ SINGULAR - CUSTOM STYLESHEET
+ * ---------------------------------
+ * ÍNDICE:
+ * 1. Paleta de Cores e Variáveis
+ * 2. Estilos Gerais e Fontes
+ * 3. Navegação Superior
+ * 4. Layout das Seções
+ * 5. Componentes Customizados
+ * 6. Rodapé
+ * ---------------------------------
+*/
 
-/* ======== 1. PALETA DE CORES E VARIÁVEIS ======== */
+/* =================================================================
+   1. PALETA DE CORES E VARIÁVEIS
+   ================================================================= */
 :root {
   --bs-primary: #D4AF37; /* Dourado */
   --bs-primary-rgb: 212, 175, 55;
@@ -9,52 +22,46 @@
   --bs-body-color: #343a40;
   --bs-link-color: #D4AF37;
   --bs-link-hover-color: #EAC65E;
-  --bs-background: #CFCFCF;
+  --bs-background: #f8f9fa;
 }
 
-/* ======== 2. ESTILOS GERAIS E FONTES ======== */
+/* =================================================================
+   2. ESTILOS GERAIS E FONTES
+   ================================================================= */
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: var(--bs-body-color);
-  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: var(--bs-background); /* Fundo cinza aplicado ao body */
-  padding-top: 56px; /* Espaço para a navbar fixa */
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bs-background);
+  padding-top: 56px;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--bs-body-color);
 }
-h1, .h1 {
-  font-size: 4.5rem;
-  line-height: 1.1;
-}
-h2, .h2 {
-  font-size: 3.5rem;
-}
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
+h1, .h1 { font-size: 4.5rem; line-height: 1.1; }
+h2, .h2 { font-size: 3.5rem; }
+h3, .h3 { font-size: 2.5rem; }
+p.lead { font-size: 1.15rem; font-weight: 400; }
 .subheading {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Saira Extra Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
 }
 
-.text-primary {
-    color: var(--bs-primary) !important;
-}
-a {
-    color: var(--bs-link-color);
-}
-a:hover, a:focus, a:active {
-    color: var(--bs-link-hover-color);
-}
+.text-primary { color: var(--bs-primary) !important; }
+a { color: var(--bs-link-color); text-decoration: none; }
+a:hover, a:focus, a:active { color: var(--bs-link-hover-color); }
 
-/* ======== 3. NAVEGAÇÃO SUPERIOR ======== */
+/* =================================================================
+   3. NAVEGAÇÃO SUPERIOR
+   ================================================================= */
 #mainNav {
   background-color: var(--bs-dark);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -78,51 +85,140 @@ a:hover, a:focus, a:active {
   color: var(--bs-primary);
 }
 
-/* ======== 4. SEÇÕES E LAYOUT DINÂMICO ======== */
+/* =================================================================
+   4. LAYOUT DAS SEÇÕES
+   ================================================================= */
 .page-section {
   padding: 6rem 0;
-  display: none; /* Todas as seções são ocultas por padrão */
   animation: fadeIn 0.6s ease-in-out;
-  min-height: calc(100vh - 56px - 101px); /* Altura mínima (tela - navbar - rodapé) */
 }
 
-.page-section.active {
-  display: flex; /* Seção ativa é exibida como flex para centralizar conteúdo */
+#about {
+  display: flex;
   align-items: center;
-}
-
-/* A seção "Sobre" tem um tratamento especial */
-header.page-section#about {
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--bs-dark);
   color: white;
+  position: relative;
+  padding-bottom: 8rem; /* Espaço para o indicador de rolagem */
 }
-header.page-section#about h1,
-header.page-section#about .subheading,
-header.page-section#about .subheading a {
-  color: white;
+#about::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(26, 35, 58, 0), var(--bs-background));
+  z-index: 1;
 }
+#about h1,
+#about .subheading,
+#about .subheading a { color: white; }
+
+#portfolio {
+  background-color: var(--bs-background);
+  position: relative;
+  z-index: 2;
+}
+
+#content-container .page-section {
+  display: none;
+  min-height: calc(100vh - 56px - 101px); /* Altura da navbar e do rodapé */
+}
+#content-container .page-section.active {
+  display: block;
+}
+
 .profile-image {
   max-width: 20rem;
   border: 0.5rem solid rgba(255, 255, 255, 0.2);
 }
 
-.card {
-  background-color: #fff;
-}
-
-/* Animação de Fade In */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ======== 5. COMPONENTES CUSTOMIZADOS ======== */
+/* =================================================================
+   5. COMPONENTES CUSTOMIZADOS
+   ================================================================= */
+/* Indicador de Rolagem */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+.scroll-down-indicator span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.scroll-down-indicator i {
+  font-size: 1.5rem;
+}
+@keyframes pulse {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.7; }
+  50% { transform: translateX(-50%) scale(1.05); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1); opacity: 0.7; }
+}
+
+/* Botão Voltar ao Topo */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bs-primary);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background-color: #c5a032; /* Um dourado um pouco mais escuro */
+  color: white;
+}
+
+/* Galeria do Portfólio */
+.portfolio-item {
+  overflow: hidden;
+  border-radius: .5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+}
+.portfolio-item img {
+  transition: transform 0.4s ease;
+}
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Ícones Sociais */
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
@@ -136,40 +232,62 @@ header.page-section#about .subheading a {
   margin-right: 1.5rem;
   transition: background-color 0.2s;
 }
-.social-icons .social-icon:last-child {
-  margin-right: 0;
+.social-icons .social-icon:last-child { margin-right: 0; }
+.social-icons .social-icon:hover { background-color: var(--bs-primary); }
+
+/* Cards de Serviço */
+.service-card {
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
 }
-.social-icons .social-icon:hover {
+.service-card:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+}
+.service-card .card-body ul li {
+    margin-bottom: 0.5rem;
+}
+.service-card .card-body ul li .fas {
+    margin-right: 0.75rem;
+    width: 20px;
+}
+.service-card.popular {
+    border-color: var(--bs-primary);
+    border-width: 2px;
+    position: relative;
+}
+.service-card.popular .badge {
+    position: absolute;
+    top: -1px;
+    right: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 10;
+}
+
+/* Visualizador Interativo */
+.portfolio-item-interactive {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.portfolio-image {
+  transition: opacity 0.3s ease-in-out;
+}
+.portfolio-image.fading {
+  opacity: 0;
+}
+.portfolio-controls {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+.plan-button.active {
   background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: white;
+  font-weight: bold;
 }
-
-.portfolio-trigger {
-  padding: 0;
-  border: none;
-  background: none;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-}
-.portfolio-trigger .img-thumbnail {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.portfolio-trigger:hover .img-thumbnail {
-  transform: scale(1.05);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
-}
-
-.modal-option-card {
-  border: 1px solid #dee2e6;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  height: 100%;
-  transition: box-shadow 0.2s ease-in-out;
-}
-.modal-option-card:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
-}
-
 .btn-outline-primary {
     --bs-btn-color: #D4AF37;
     --bs-btn-border-color: #D4AF37;
@@ -178,35 +296,43 @@ header.page-section#about .subheading a {
     --bs-btn-hover-border-color: #D4AF37;
 }
 
-.portfolio-panel {
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 0.5rem;
-  height: 100%;
+/* Cards do Blog */
+.blog-post-card {
+    border: none;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.modal-body h6 {
+    color: var(--bs-primary);
+    font-weight: 700;
+    margin-top: 1.5rem;
 }
 
-.portfolio-panel .plan-button.active {
-  background-color: var(--bs-primary);
-  color: white;
-  font-weight: bold;
+/* Formulário de Contato */
+.contact-form .form-control {
+    border-radius: .5rem;
+    padding: .75rem 1rem;
+}
+.contact-form .form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
 }
 
-/* ======== 6. RODAPÉ ======== */
+/* =================================================================
+   6. RODAPÉ
+   ================================================================= */
 .site-footer {
   background-color: var(--bs-dark);
   color: rgba(255, 255, 255, 0.7);
   padding: 2.5rem 0;
 }
-
-.site-footer p {
-  font-size: 0.9rem;
-}
-
+.site-footer p { font-size: 0.9rem; }
 .site-footer .social-icon {
   background-color: rgba(255, 255, 255, 0.1);
   margin: 0 0.5rem;
 }
-
-.site-footer .social-icon:hover {
-  background-color: var(--bs-primary);
-}
+.site-footer .social-icon:hover { background-color: var(--bs-primary); }
