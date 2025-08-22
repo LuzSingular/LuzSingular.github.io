@@ -49,6 +49,7 @@
             <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
             <li class="nav-item"><a class="nav-link" href="#processo">Como Funciona?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
           </ul>
         </div>
@@ -141,7 +142,7 @@
                     
                     <ul class="nav nav-pills justify-content-center mb-5" id="servicosTab" role="tablist" data-aos="fade-up" data-aos-delay="200">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pacotes-tab" data-bs-toggle="tab" data-bs-target="#pacotes-tab-pane" type="button" role="tab" aria-controls="pacotes-tab-pane" aria-selected="true">📷 Pacotes de Ensaio</button>
+                            <button class="nav-link active" id="pacotes-tab" data-bs-toggle="tab" data-bs-target="#pacotes-tab-pane" type="button" role="tab" aria-controls="pacotes-tab-pane" aria-selected="true">📷 Pacotes de fotos</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="planos-tab" data-bs-toggle="tab" data-bs-target="#planos-tab-pane" type="button" role="tab" aria-controls="planos-tab-pane" aria-selected="false">📸 Planos por Foto</button>
@@ -155,46 +156,64 @@
                         <!-- Tab: Pacotes de Ensaio -->
                         <div class="tab-pane fade show active" id="pacotes-tab-pane" role="tabpanel" aria-labelledby="pacotes-tab">
                             <div class="row">
+                                <!-- Pacote Essencial -->
                                 <div class="col-lg-4 mb-4" data-aos="fade-up">
                                     <div class="card service-card h-100">
                                         <div class="card-body d-flex flex-column">
                                             <h4 class="card-title">Pacote Essencial</h4>
-											   <h6 class="card-subtitle mb-3 text-muted">R$ 60,00</h6>
+                                            <h6 class="card-subtitle mb-3 text-muted">R$ 60,00</h6>
                                             <ul class="list-unstyled">
                                                 <li><i class="fas fa-check text-primary"></i> 15 fotos com tratamento padrão</li>
                                                 <li><i class="fas fa-check text-primary"></i> Até 1 hora de ensaio</li>
                                                 <li><i class="fas fa-check text-primary"></i> Entrega digital em alta resolução</li>
                                             </ul>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Essencial." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                            <div class="d-flex mt-auto">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Essencial." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Pacote Essencial">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Pacote Padrão -->
                                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                                     <div class="card service-card h-100 popular">
                                         <span class="badge bg-primary">Mais Popular</span>
                                         <div class="card-body d-flex flex-column">
                                             <h4 class="card-title">Pacote Padrão</h4>
-											   <h6 class="card-subtitle mb-3 text-muted">R$ 96,00</h6>
+                                            <h6 class="card-subtitle mb-3 text-muted">R$ 96,00</h6>
                                             <ul class="list-unstyled">
                                                 <li><i class="fas fa-check text-primary"></i> 30 fotos com tratamento padrão</li>
                                                 <li><i class="fas fa-check text-primary"></i> Até 2 horas de ensaio</li>
                                                 <li><i class="fas fa-check text-primary"></i> Entrega digital em alta resolução</li>
                                             </ul>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Padrão." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                            <div class="d-flex mt-auto">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Padrão." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Pacote Padrão">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Pacote Premium -->
                                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                                     <div class="card service-card h-100">
                                         <div class="card-body d-flex flex-column">
                                             <h4 class="card-title">Pacote Premium</h4>
-											   <h6 class="card-subtitle mb-3 text-muted">R$ 160,00</h6>
+                                            <h6 class="card-subtitle mb-3 text-muted">R$ 160,00</h6>
                                             <ul class="list-unstyled">
                                                 <li><i class="fas fa-check text-primary"></i> 50 fotos com tratamento padrão</li>
                                                 <li><i class="fas fa-check text-primary"></i> Até 3 horas de ensaio</li>
                                                 <li><i class="fas fa-check text-primary"></i> Entrega digital em alta resolução</li>
                                             </ul>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Premium." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                            <div class="d-flex mt-auto">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Pacote%20Premium." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Pacote Premium">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -208,10 +227,10 @@
                                 <div class="col-lg-4 mb-5 mb-lg-0">
                                     <div class="portfolio-item-interactive shadow rounded">
                                         <div class="portfolio-image-container" 
-                                             data-img-basico="assets/img/Planos/1.webp" 
-                                             data-img-intermediario="assets/img/Planos/2.webp" 
-                                             data-img-premium="assets/img/Planos/3.webp">
-                                            <img class="img-fluid portfolio-image" src="assets/img/Planos/2.webp" alt="Exemplo de tratamento de foto">
+                                             data-img-basico="assets/img/planos/1.webp" 
+                                             data-img-intermediario="assets/img/planos/2.webp" 
+                                             data-img-premium="assets/img/planos/3.webp">
+                                            <img class="img-fluid portfolio-image" src="assets/img/planos/2.webp" alt="Exemplo de tratamento de foto">
                                         </div>
                                         <div class="portfolio-controls p-3">
                                             <h6 class="text-center mb-2">Veja a diferença de cada tratamento:</h6>
@@ -225,16 +244,23 @@
                                 </div>
                                 <!-- Coluna da Direita: Cards de Planos -->
                                 <div class="col-lg-7">
+                                    <!-- Plano Básico -->
                                     <div class="card service-card h-60 mb-4">
                                         <div class="card-body d-flex flex-column">
                                             <h4 class="card-title">Plano Básico</h4>
                                             <h6 class="card-subtitle mb-3 text-muted">R$ 7,90 / foto</h6>
                                             <ul class="list-unstyled">
-                                                <li><i class="fas fa-check text-primary"></i> Direto da câmera; Sem nenhum  tratamento!.</li>
+                                                <li><i class="fas fa-check text-primary"></i> Direto da câmera; Sem nenhum tratamento!</li>
                                             </ul>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Básico%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                            <div class="d-flex mt-auto">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Básico%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Plano Básico por Foto">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
+                                    <!-- Plano Padrão -->
                                     <div class="card service-card h-60 mb-4">
                                         <div class="card-body d-flex flex-column">
                                             <h4 class="card-title">Plano Padrão</h4>
@@ -242,9 +268,15 @@
                                             <ul class="list-unstyled">
                                                 <li><i class="fas fa-check text-primary"></i> Tratamento cor e luz.</li>
                                             </ul>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Padrão%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                            <div class="d-flex mt-auto">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Padrão%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Plano Padrão por Foto">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
+                                    <!-- Plano Premium -->
                                     <div class="card service-card h-60">
                                         <div class="card-body d-flex flex-column">
                                             <h4 class="card-title">Plano Premium</h4>
@@ -252,7 +284,12 @@
                                             <ul class="list-unstyled">
                                                 <li><i class="fas fa-check text-primary"></i> Tratamento completo, com retoques finos.</li>
                                             </ul>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Premium%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Solicitar Orçamento</a>
+                                            <div class="d-flex mt-auto">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20o%20Plano%20Premium%20por%20foto." target="_blank" rel="noopener noreferrer" class="btn btn-primary w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Plano Premium por Foto">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -267,8 +304,14 @@
                                         <div class="card-body text-center p-4">
                                             <h3 class="card-title">Impressão de Qualidade</h3>
                                             <p class="lead">A partir de R$ 8,00</p>
-                                            <p>Imprimo seu material no formato A4 com qualidade profissional. Ideal para pôsteres, banners, convites e mais. Não inclui recorte, moldura ou montagem.</p>
-                                            <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20impressão." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg mt-3">Solicitar Orçamento</a>
+                                            <p>Imprimo seu material no formato A4 com qualidade profissional. Ideal para pôsteres, banners, convites e mais.</p> 
+											<p>⚠️Não inclui recorte, moldura ou montagem.</p>
+                                            <div class="d-flex mt-3">
+                                                <a href="https://api.whatsapp.com/send?phone=5513998059374&text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20impressão." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg w-100">Solicitar Orçamento</a>
+                                                <button type="button" class="btn btn-outline-secondary ms-2 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#doubtModal" data-service-name="Impressão de Qualidade">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -276,8 +319,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-
             </section>
 
             <!-- ========================== PROCESS SECTION =========================== -->
@@ -342,6 +383,46 @@
                 </div>
             </section>
             
+            <!-- ========================== BLOG SECTION =========================== -->
+            <section class="page-section bg-light" id="blog">
+                <div class="container">
+                    <h2 class="mb-5 text-center" data-aos="fade-up">Meu Blog</h2>
+                    <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">Dicas, inspirações e histórias do mundo da fotografia.</p>
+                    <div class="row g-4">
+                        <!-- Exemplo de Post 1 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card blog-post-card h-100">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">5 Dicas para um Ensaio Fotográfico Inesquecível</h5>
+                                    <p class="card-text">Prepare-se para o seu ensaio com estas dicas simples e garanta fotos incríveis que capturam sua verdadeira essência...</p>
+                                    <button class="btn btn-link text-primary mt-auto p-0" data-bs-toggle="modal" data-bs-target="#blogPostModal" data-post-id="1">Ler mais <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Exemplo de Post 2 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card blog-post-card h-100">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">A Importância da Impressão das Suas Fotos</h5>
+                                    <p class="card-text">Num mundo digital, o valor de uma foto impressa é imensurável. Descubra por que você deveria imprimir suas memórias...</p>
+                                    <button class="btn btn-link text-primary mt-auto p-0" data-bs-toggle="modal" data-bs-target="#blogPostModal" data-post-id="2">Ler mais <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Exemplo de Post 3 -->
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card blog-post-card h-100">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Como Escolher o Local Perfeito para seu Ensaio</h5>
+                                    <p class="card-text">O cenário faz toda a diferença. Explore ideias de locais que podem transformar completamente o seu ensaio fotográfico...</p>
+                                    <button class="btn btn-link text-primary mt-auto p-0" data-bs-toggle="modal" data-bs-target="#blogPostModal" data-post-id="3">Ler mais <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- ========================== CONTACT SECTION =========================== -->
             <section class="page-section" id="contato">
               <div class="container">
@@ -407,6 +488,63 @@
     </a>
 
     <!-- =================================================================
+    MODALS
+    ================================================================== -->
+    <!-- Modal de Dúvidas -->
+    <div class="modal fade" id="doubtModal" tabindex="-1" aria-labelledby="doubtModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="doubtModalLabel">Tire sua Dúvida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="doubtForm" action="https://formspree.io/f/xjkonkzw" method="POST">
+                        <p>Olá! Preencha o formulário abaixo para enviar sua dúvida sobre <strong id="serviceName"></strong>. Retornarei o mais breve possível.</p>
+                        <input type="hidden" name="service_inquiry" id="serviceInput">
+                        <div class="mb-3">
+                            <label for="doubtName" class="form-label">Seu Nome</label>
+                            <input type="text" class="form-control" id="doubtName" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="doubtEmail" class="form-label">Seu Email</label>
+                            <input type="email" class="form-control" id="doubtEmail" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="doubtMessage" class="form-label">Sua Dúvida</label>
+                            <textarea class="form-control" id="doubtMessage" name="message" rows="4" required></textarea>
+                        </div>
+                        <div id="doubt-form-status" class="mt-3 text-center"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" form="doubtForm" class="btn btn-primary">Enviar Dúvida</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Blog -->
+    <div class="modal fade" id="blogPostModal" tabindex="-1" aria-labelledby="blogPostModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blogPostModalLabel">Título do Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="blogPostModalBody">
+            <!-- Conteúdo do post será carregado aqui -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- =================================================================
     SCRIPTS
     ================================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -414,4 +552,3 @@
     <script src="js/scripts.js" defer></script>
   </body>
 </html>
-

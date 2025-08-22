@@ -23,6 +23,7 @@
   --bs-link-color: #D4AF37;
   --bs-link-hover-color: #EAC65E;
   --bs-background: #f8f9fa;
+  --bs-light: #f8f9fa;
 }
 
 /* =================================================================
@@ -266,6 +267,14 @@ a:hover, a:focus, a:active { color: var(--bs-link-hover-color); }
     border-top-right-radius: 0;
     z-index: 10;
 }
+.btn-outline-secondary {
+    --bs-btn-color: #6c757d;
+    --bs-btn-border-color: #6c757d;
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-hover-color: #fff;
+}
+
 
 /* Visualizador Interativo */
 .portfolio-item-interactive {
@@ -310,6 +319,10 @@ a:hover, a:focus, a:active { color: var(--bs-link-hover-color); }
     color: var(--bs-primary);
     font-weight: 700;
     margin-top: 1.5rem;
+}
+.blog-post-card .card-img-top {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 /* Formulário de Contato */
